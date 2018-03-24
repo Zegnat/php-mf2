@@ -13,10 +13,16 @@
     "require": {
         "php": ">=5.4.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zegnat/microformats-tests"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "4.8.*",
         "phpdocumentor/phpdocumentor": "v2.8.4",
-        "mf2/tests": "@dev"
+        "mf2/tests": "dev-zegnat-master"
     },
     "autoload": {
         "files": ["Mf2/Parser.php"]
