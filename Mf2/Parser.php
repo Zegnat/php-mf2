@@ -362,13 +362,13 @@ class Parser {
 					$doc = $doc->loadHTML($input);
 			} else {
 				$doc = new DOMDocument();
-				@$doc->loadHTML(unicodeToHtmlEntities($input));
+				@$doc->loadHTML(unicodeToHtmlEntities($input), LIBXML_PARSEHUGE);
 			}
 		} elseif (is_a($input, 'DOMDocument')) {
 			$doc = clone $input;
 		} else {
 			$doc = new DOMDocument();
-			@$doc->loadHTML('');
+			@$doc->loadHTML('', LIBXML_PARSEHUGE);
 		}
 
 		$this->xpath = new DOMXPath($doc);
