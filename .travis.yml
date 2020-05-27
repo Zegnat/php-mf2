@@ -1,5 +1,5 @@
 os: linux
-dist: bionic
+dist: trusty
 language: php
 php:
   - 5.6
